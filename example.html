@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="./random.js"></script>
+</head>
+<body>
+<script>
+	var randoms = [
+		{
+			msg: "Rand a int varies [0,10]",
+			value: RandMaster.randInt(10)
+		},
+		{
+			msg: "Rand numbers to make a string(first letter can be zero)",
+			value: RandMaster.randNumString(10)
+		},
+		{
+			msg: "Rand String from characters(can also contains symbol and number if wish)",
+			value: RandMaster.randString(10, false, false)
+		}
+	];
+
+	for (var i = randoms.length - 1; i >= 0; i--) {
+		var msg = randoms[i]['msg'];
+		var value = randoms[i]['value'];
+		document.write(`<p>${msg} : ${value}</p>`);
+	}
+</script>
+
+<p></p>
+
+
+</body>
+</html>
